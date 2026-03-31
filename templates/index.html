@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra Keluarga - Rumah Sakit Terpercaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header-top">
+            <a href="/" class="logo">
+                <div class="logo-icon">MK</div>
+                Mitra Keluarga
+            </a>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input type="text" placeholder="Cari dokter, layanan, artikel..." id="searchInput">
+                </div>
+                <button class="btn-igd">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M5 9l2 -4h7l2 4" />
+                        <path d="M1 9h20v5a2 2 0 0 1 -2 2h-2m-4 0h-6m-4 0h-2a2 2 0 0 1 -2 -2v-5" />
+                        <path d="M12 9v3" />
+                        <path d="M10.5 10.5h3" />
+                    </svg>
+                    IGD
+                </button>
+                <button class="btn-login" onclick="alert('Fitur login akan segera hadir!')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    Login
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list" id="navList">
+                    <li><a href="/" class="active">Beranda</a></li>
+                    <li><a href="/janji-temu">Buat Janji Temu</a></li>
+                    <li><a href="/spesialisasi">Cari Dokter</a></li>
+                    <li><a href="#coe-section">Layanan Unggulan</a></li>
+                    <li><a href="#promo-section">Promo</a></li>
+                    <li><a href="#artikel-section">Artikel</a></li>
+                    <li><a href="#about-section">Tentang Kami</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO BANNER ===== -->
+    <section class="hero">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Slide 1 -->
+            <div class="hero-slide">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Kesehatan Keluarga<br>Adalah Prioritas Kami</h1>
+                        <p>Mitra Keluarga menyediakan pelayanan kesehatan terbaik didukung oleh dokter spesialis
+                            berpengalaman dan fasilitas medis modern.</p>
+                        <a href="/janji-temu" class="btn-igd"
+                            style="display: inline-flex; background: var(--primary-blue); font-size: 1rem; padding: 14px 32px; border-radius: 30px;">
+                            Buat Janji Temu &rarr;
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-image-placeholder">🏥</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide" style="background: linear-gradient(135deg, #f0e6f6 0%, #e8f4fd 100%);">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Medical Check Up<br>Lengkap & Terjangkau</h1>
+                        <p>Pantau kesehatan Anda secara berkala dengan paket Medical Check Up yang komprehensif di
+                            seluruh cabang Mitra Keluarga.</p>
+                        <a href="#promo-section" class="btn-igd"
+                            style="display: inline-flex; background: var(--secondary-magenta); font-size: 1rem; padding: 14px 32px; border-radius: 30px;">
+                            Lihat Promo MCU &rarr;
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-image-placeholder"
+                            style="background: linear-gradient(135deg, var(--secondary-magenta), var(--accent-orange));">
+                            🩺</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide" style="background: linear-gradient(135deg, #e8f9f0 0%, #e8f4fd 100%);">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Download Aplikasi<br>Mitra Keluarga</h1>
+                        <p>Buat janji temu, cek jadwal dokter, dan akses rekam medis langsung dari smartphone Anda kapan
+                            saja.</p>
+                        <a href="#" class="btn-igd"
+                            style="display: inline-flex; background: #25d366; font-size: 1rem; padding: 14px 32px; border-radius: 30px;">
+                            Download Sekarang &rarr;
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-image-placeholder"
+                            style="background: linear-gradient(135deg, #43e97b, #38f9d7);">📱</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-dots">
+            <button class="hero-dot active" data-slide="0"></button>
+            <button class="hero-dot" data-slide="1"></button>
+            <button class="hero-dot" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- ===== QUICK ACTIONS ===== -->
+    <section class="quick-actions">
+        <div class="container">
+            <div class="quick-actions-grid">
+                <a href="#" class="quick-action-card">
+                    <div class="quick-action-icon blue">🏥</div>
+                    <div>
+                        <h3>Medical Check Up</h3>
+                        <p>Paket pemeriksaan kesehatan menyeluruh untuk seluruh keluarga</p>
+                    </div>
+                </a>
+                <a href="/janji-temu" class="quick-action-card">
+                    <div class="quick-action-icon magenta">📋</div>
+                    <div>
+                        <h3>Buat Janji Temu</h3>
+                        <p>Reservasi jadwal dokter secara online dengan mudah dan cepat</p>
+                    </div>
+                </a>
+                <a href="#" class="quick-action-card">
+                    <div class="quick-action-icon orange">📱</div>
+                    <div>
+                        <h3>Download Aplikasi</h3>
+                        <p>Akses layanan kesehatan kapan saja melalui aplikasi MIKA</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CENTER OF EXCELLENCE ===== -->
+    <section class="section" id="coe-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Center of Excellence (CoE)</h2>
+                <a href="#" class="view-all">Lihat Semua &rarr;</a>
+            </div>
+            <div class="coe-grid">
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-1">🎗️</div>
+                    <div class="coe-card-body">
+                        <h3>Radiotherapy & Oncology Center</h3>
+                        <p>Pusat layanan komprehensif berupa terapi, pencegahan, dan edukasi terhadap penyakit kanker
+                            didukung tim dokter onkologi.</p>
+                    </div>
+                </div>
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-2">❤️</div>
+                    <div class="coe-card-body">
+                        <h3>Heart & Vascular Center</h3>
+                        <p>Pusat pelayanan serta penanganan penyakit jantung dan pembuluh darah meliputi konsultasi,
+                            pemeriksaan, dan pengobatan.</p>
+                    </div>
+                </div>
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-3">⚽</div>
+                    <div class="coe-card-body">
+                        <h3>Mitra Orphys Sports Clinic</h3>
+                        <p>Pusat program terpadu rehabilitasi cedera olahraga dengan pendampingan dokter ortopedi dan
+                            fisioterapis.</p>
+                    </div>
+                </div>
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-4">🧠</div>
+                    <div class="coe-card-body">
+                        <h3>Brain & Spine Center</h3>
+                        <p>Layanan terpadu untuk pemulihan berbagai kelainan pada otak dan saraf dengan teknik
+                            pembedahan minim rasa sakit.</p>
+                    </div>
+                </div>
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-5">👂</div>
+                    <div class="coe-card-body">
+                        <h3>Jakarta Ear & Hearing Center</h3>
+                        <p>Pusat layanan dan penanganan gangguan pendengaran akibat kerusakan koklea dengan dukungan
+                            teknologi mutakhir.</p>
+                    </div>
+                </div>
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-6">👶</div>
+                    <div class="coe-card-body">
+                        <h3>Klinik Fertilitas & Bayi Tabung Mbrio</h3>
+                        <p>Pusat kesehatan reproduksi pria dan wanita serta program kehamilan, bayi tabung, inseminasi,
+                            dan bank sperma.</p>
+                    </div>
+                </div>
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-7">😴</div>
+                    <div class="coe-card-body">
+                        <h3>Sleep Disorder Clinic</h3>
+                        <p>Klinik gangguan tidur pertama di Indonesia yang membantu memeriksa dan menangani masalah pola
+                            tidur.</p>
+                    </div>
+                </div>
+                <div class="coe-card">
+                    <div class="coe-card-image gradient-8">🦶</div>
+                    <div class="coe-card-body">
+                        <h3>Kid's Foot</h3>
+                        <p>Klinik rehabilitasi gangguan bentuk dan fungsi kaki pada anak serta terapi gaya berjalan agar
+                            kembali normal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROMO ===== -->
+    <section class="section bg-light" id="promo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Promo</h2>
+                <a href="#" class="view-all">Lihat Semua &rarr;</a>
+            </div>
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <div class="promo-card-image promo-1">
+                        🩺
+                        <span class="promo-badge">Terbatas</span>
+                    </div>
+                    <div class="promo-card-body">
+                        <h3>Promo MCU Executive Spesial Lebaran</h3>
+                        <div class="promo-meta">
+                            <span>31 Mar 2026</span>
+                            <span class="promo-price">Rp 2.800.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-card-image promo-2">
+                        🤰
+                        <span class="promo-badge">Promo</span>
+                    </div>
+                    <div class="promo-card-body">
+                        <h3>Paket USG 4D Hanya Rp499.000 di Mitra Keluarga Depok</h3>
+                        <div class="promo-meta">
+                            <span>31 Des 2026</span>
+                            <span class="promo-price">Rp 499.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-card-image promo-3">
+                        🔬
+                        <span class="promo-badge">Baru</span>
+                    </div>
+                    <div class="promo-card-body">
+                        <h3>Deteksi 10 Jenis Kanker dengan SPOTMAS</h3>
+                        <div class="promo-meta">
+                            <span>31 Des 2026</span>
+                            <span class="promo-price">Rp 1.250.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ARTICLES ===== -->
+    <section class="section" id="artikel-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Yang Terbaru dari Mitra Keluarga</h2>
+                <a href="#" class="view-all">Lihat Semua &rarr;</a>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-card-image art-1">👶</div>
+                    <div class="article-card-body">
+                        <h3>Berat Badan Ideal Anak Umur 1-5 Tahun, Disertai Tips Lengkap</h3>
+                        <span class="article-date">06 Maret 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-2">🤝</div>
+                    <div class="article-card-body">
+                        <h3>Tremor pada Lansia Apakah Berbahaya? Penyebab dan Cara Mengatasinya</h3>
+                        <span class="article-date">26 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-3">🔴</div>
+                    <div class="article-card-body">
+                        <h3>Kenali 9 Penyebab Bintik Merah Disertai Gatal dan Pengobatannya</h3>
+                        <span class="article-date">23 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-4">✋</div>
+                    <div class="article-card-body">
+                        <h3>Penyebab Utama Jari Tangan Kaku dan Nyeri saat Digerakkan</h3>
+                        <span class="article-date">19 Februari 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT & TESTIMONIALS ===== -->
+    <section class="section bg-light" id="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tentang Mitra Keluarga</h2>
+                <a href="#" class="view-all">Tentang Kami &rarr;</a>
+            </div>
+            <p style="color: var(--text-gray); margin-bottom: 40px; font-size: 1rem;">
+                Berkomitmen untuk menjangkau lebih banyak keluarga Indonesia, kami siap melangkah maju.
+            </p>
+
+            <h3 style="margin-bottom: 24px; font-size: 1.2rem;">Apa kata mereka tentang Mitra Keluarga?</h3>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">Pelayanan di Mitra Keluarga cepat dan cukup baik. Selama kontrol dan
+                        mendapatkan vaksin, saya diberikan kemudahan untuk mengurus kebutuhan. Saya merasa tidak salah
+                        memilih Mitra Keluarga.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">UH</div>
+                        <div>
+                            <div class="testimonial-author-name">Ummu Hanni</div>
+                            <div class="testimonial-author-role">Pasien MK Deltamas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">Sebelumnya di kepala saya ada tumor yang menekan retina belakang mata.
+                        Setelah operasi di Mitra Keluarga Kelapa Gading, pandangan saya sudah kembali jelas. Terima
+                        kasih Mitra Keluarga.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SR</div>
+                        <div>
+                            <div class="testimonial-author-name">Sri Retno</div>
+                            <div class="testimonial-author-role">Pasien MK Bintaro</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">Terapi wicara di Mitra Keluarga Tegal sangat membantu perkembangan anak
+                        saya yang sempat mengalami speech delay. Progres terapi cukup baik berkat fisioterapis yang
+                        ramah dan profesional.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AF</div>
+                        <div>
+                            <div class="testimonial-author-name">Ayah Firhan</div>
+                            <div class="testimonial-author-role">Pasien MK Tegal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; font-size: 1.6rem;">Percayakan Kesehatan Anda pada Mitra
+                Keluarga</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">⭐</div>
+                    <h3>Service Excellence</h3>
+                    <p>Terdepan dalam memberikan pelayanan optimal yang berorientasi pasien.</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🌍</div>
+                    <h3>Jaringan Luas</h3>
+                    <p>Memiliki jaringan rumah sakit yang tersebar di Jabodetabek, Jawa Tengah, dan Jawa Timur.</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🔬</div>
+                    <h3>Fasilitas Unggulan</h3>
+                    <p>Dilengkapi Centre of Excellence untuk menunjang diagnosis dan perawatan dengan inovasi medis
+                        mutakhir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHATSAPP CTA ===== -->
+    <section class="cta-whatsapp">
+        <div class="container">
+            <h2>WhatsApp Customer Care Mitra Keluarga</h2>
+            <p>Hadir untuk menjawab kebutuhan informasi Sahabat MIKA</p>
+            <button class="btn-whatsapp"
+                onclick="window.open('https://api.whatsapp.com/send/?phone=6281280000911','_blank')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path
+                        d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .611.611l4.458-1.495A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.686-6.416-1.867l-.448-.285-3.107 1.041 1.041-3.107-.285-.448A9.958 9.958 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                </svg>
+                0812 8000 0911
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Dapatkan Informasi Terbaru</h2>
+            <p>Subscribe ke mailing list untuk mendapatkan update terbaru dari Mitra Keluarga.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan!');">
+                <input type="email" placeholder="Masukkan email Anda" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-disclaimer">Mitra Keluarga tidak akan menyebarluaskan atau menjual data Anda.</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <div class="logo-icon">MK</div>
+                        Mitra Keluarga
+                    </a>
+                    <p>Rumah Sakit Mitra Keluarga berkomitmen menjadi mitra kesehatan terpercaya bagi keluarga Indonesia
+                        dengan layanan medis terdepan.</p>
+                    <div class="footer-social">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="TikTok">🎵</a>
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="YouTube">🎬</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Menu</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Investor</a></li>
+                        <li><a href="#">Download Aplikasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="/janji-temu">Buat Janji Temu</a></li>
+                        <li><a href="/spesialisasi">Cari Dokter</a></li>
+                        <li><a href="#">Cari Lokasi</a></li>
+                        <li><a href="#">Karir</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li><a href="#">📞 (021) 6453-888</a></li>
+                        <li><a href="#">📧 info@mitrakeluarga.com</a></li>
+                        <li><a href="#">💬 0812 8000 0911</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Rumah Sakit Mitra Keluarga. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING CTA ===== -->
+    <div class="floating-cta">
+        <a href="/janji-temu" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Cari Dokter & Buat Janji Temu
+        </a>
+        <button class="btn-chat" onclick="window.open('https://api.whatsapp.com/send/?phone=6281280000911','_blank')">
+            💬 Live Chat
+        </button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
