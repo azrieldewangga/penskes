@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - PensKes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header-top">
+            <a href="/" class="logo">
+                <div class="logo-icon">PK</div>
+                PensKes
+            </a>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input type="text" placeholder="Cari dokter, layanan, artikel..." id="searchInput">
+                </div>
+                <button class="btn-igd">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M5 9l2 -4h7l2 4" />
+                        <path d="M1 9h20v5a2 2 0 0 1 -2 2h-2m-4 0h-6m-4 0h-2a2 2 0 0 1 -2 -2v-5" />
+                        <path d="M12 9v3" />
+                        <path d="M10.5 10.5h3" />
+                    </svg>
+                    IGD
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list" id="navList">
+                    <li><a href="/">Beranda</a></li>
+                    <li><a href="/janji-temu">Buat Janji Temu</a></li>
+                    <li><a href="/spesialisasi">Cari Dokter</a></li>
+                    <li><a href="/layanan-unggulan">Layanan Unggulan</a></li>
+                    <li><a href="/promo">Promo</a></li>
+                    <li><a href="/artikel" class="active">Artikel</a></li>
+                    <li><a href="/tentang-kami">Tentang Kami</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="container">
+        <div class="page-breadcrumb">
+            <a href="/">Beranda</a> <span>&gt;</span> Artikel
+        </div>
+    </div>
+
+    <!-- ===== CONTENT ===== -->
+    <section class="page-content-section">
+        <div class="container">
+            <h1>Artikel</h1>
+            <p class="page-desc">Temukan informasi kesehatan terpercaya, tips hidup sehat, dan edukasi medis dari
+                para dokter ahli PensKes.</p>
+
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-card-image art-1"><img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=600&h=300&q=80" alt="Berat Badan Ideal Anak" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Berat Badan Ideal Anak Umur 1-5 Tahun, Disertai Tips Lengkap</h3>
+                        <span class="article-date">06 Maret 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-2"><img src="https://images.unsplash.com/photo-1477601263568-180e2c6d046e?auto=format&fit=crop&w=600&h=300&q=80" alt="Tremor pada Lansia" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Tremor pada Lansia Apakah Berbahaya? Penyebab dan Cara Mengatasinya</h3>
+                        <span class="article-date">26 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-3"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&h=300&q=80" alt="Bintik Merah Gatal" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Kenali 9 Penyebab Bintik Merah Disertai Gatal dan Pengobatannya</h3>
+                        <span class="article-date">23 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-4"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=600&h=300&q=80" alt="Jari Tangan Kaku" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Penyebab Utama Jari Tangan Kaku dan Nyeri saat Digerakkan</h3>
+                        <span class="article-date">19 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-1"><img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=600&h=300&q=80" alt="Kesehatan Jantung" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Cara Menjaga Kesehatan Jantung di Usia 40-an</h3>
+                        <span class="article-date">15 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-2"><img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&h=300&q=80" alt="Insomnia" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Tips Mengatasi Insomnia untuk Tidur Lebih Nyenyak</h3>
+                        <span class="article-date">10 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-3"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=300&q=80" alt="Medical Check Up" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Manfaat Medical Check Up Rutin untuk Kesehatan Jangka Panjang</h3>
+                        <span class="article-date">05 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-4"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&h=300&q=80" alt="Gejala Diabetes" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Gejala Diabetes yang Sering Diabaikan dan Cara Mencegahnya</h3>
+                        <span class="article-date">01 Februari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-1"><img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=600&h=300&q=80" alt="Vaksinasi" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Pentingnya Vaksinasi untuk Anak dan Dewasa</h3>
+                        <span class="article-date">25 Januari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-2"><img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&h=300&q=80" alt="Kanker Serviks" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Mengenal Kanker Serviks dan Cara Pencegahannya</h3>
+                        <span class="article-date">20 Januari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-3"><img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=600&h=300&q=80" alt="Kesehatan Mata" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Cara Merawat Kesehatan Mata di Era Digital</h3>
+                        <span class="article-date">15 Januari 2026</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-card-image art-4"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&h=300&q=80" alt="Diet Sehat Hipertensi" loading="lazy"></div>
+                    <div class="article-card-body">
+                        <h3>Diet Sehat untuk Penderita Hipertensi</h3>
+                        <span class="article-date">10 Januari 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <div class="logo-icon">PK</div>
+                        PensKes
+                    </a>
+                    <p>Rumah Sakit PensKes berkomitmen menjadi mitra kesehatan terpercaya bagi keluarga Indonesia
+                        dengan layanan medis terdepan.</p>
+                    <div class="footer-social">
+                        <a href="#" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" title="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.54V6.79a4.85 4.85 0 01-1.01-.1z"/></svg>
+                        </a>
+                        <a href="#" title="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" title="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Menu</h4>
+                    <ul>
+                        <li><a href="/tentang-kami">Tentang Kami</a></li>
+                        <li><a href="#">Investor</a></li>
+                        <li><a href="#">Download Aplikasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="/janji-temu">Buat Janji Temu</a></li>
+                        <li><a href="/spesialisasi">Cari Dokter</a></li>
+                        <li><a href="#">Cari Lokasi</a></li>
+                        <li><a href="#">Karir</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li><a href="#">📞 (021) 6453-888</a></li>
+                        <li><a href="#">📧 info@penskes.com</a></li>
+                        <li><a href="#">💬 0812 8000 0911</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Rumah Sakit PensKes. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING CTA ===== -->
+    <div class="floating-cta">
+        <a href="/janji-temu" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Cari Dokter &amp; Buat Janji Temu
+        </a>
+        <button class="btn-chat" onclick="window.open('https://api.whatsapp.com/send/?phone=6281280000911','_blank')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .611.611l4.458-1.495A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.686-6.416-1.867l-.448-.285-3.107 1.041 1.041-3.107-.285-.448A9.958 9.958 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+            </svg>
+            Live Chat
+        </button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

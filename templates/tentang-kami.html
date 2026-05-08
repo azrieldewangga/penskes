@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spesialisasi & Cari Dokter - PensKes</title>
+    <title>Tentang Kami - PensKes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -18,7 +18,6 @@
                 <div class="logo-icon">PK</div>
                 PensKes
             </a>
-
             <div class="header-actions">
                 <div class="search-bar">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -42,17 +41,16 @@
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
             </div>
         </div>
-
         <nav class="nav">
             <div class="container">
                 <ul class="nav-list" id="navList">
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/janji-temu">Buat Janji Temu</a></li>
-                    <li><a href="/spesialisasi" class="active">Cari Dokter</a></li>
+                    <li><a href="/spesialisasi">Cari Dokter</a></li>
                     <li><a href="/layanan-unggulan">Layanan Unggulan</a></li>
                     <li><a href="/promo">Promo</a></li>
                     <li><a href="/artikel">Artikel</a></li>
-                    <li><a href="/tentang-kami">Tentang Kami</a></li>
+                    <li><a href="/tentang-kami" class="active">Tentang Kami</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,42 +59,63 @@
     <!-- ===== BREADCRUMB ===== -->
     <div class="container">
         <div class="page-breadcrumb">
-            <a href="/">Beranda</a> <span>&gt;</span> Spesialisasi
+            <a href="/">Beranda</a> <span>&gt;</span> Tentang Kami
         </div>
     </div>
 
-    <!-- ===== SPECIALIZATION ===== -->
-    <section class="specialization-section">
+    <!-- ===== CONTENT ===== -->
+    <section class="about-section">
         <div class="container">
-            <h1>Spesialisasi</h1>
 
-            <!-- Filter Tabs -->
-            <div class="filter-tabs" id="filterTabs">
-                <button class="filter-tab active" data-filter="all">Semua</button>
-                <button class="filter-tab" data-filter="anak">Anak</button>
-                <button class="filter-tab" data-filter="bedah">Bedah</button>
-                <button class="filter-tab" data-filter="gigi">Gigi</button>
-                <button class="filter-tab" data-filter="jantung">Jantung</button>
-                <button class="filter-tab" data-filter="kandungan">Kandungan</button>
-                <button class="filter-tab" data-filter="mata">Mata</button>
-                <button class="filter-tab" data-filter="paru">Paru</button>
-                <button class="filter-tab" data-filter="penyakit-dalam">Penyakit Dalam</button>
-                <button class="filter-tab" data-filter="saraf">Saraf</button>
-                <button class="filter-tab" data-filter="tht">THT</button>
-                <button class="filter-tab" data-filter="kulit">Kulit</button>
-                <button class="filter-tab" data-filter="rehabilitasi">Rehabilitasi</button>
-                <button class="filter-tab" data-filter="psikolog">Psikolog</button>
+            <!-- Intro Layout: Image + Text -->
+            <div class="about-layout">
+                <div class="about-image-placeholder"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&h=600&q=80" alt="Rumah Sakit PensKes" loading="lazy"></div>
+                <div class="about-text">
+                    <h1>Tentang Kami</h1>
+                    <p>PensKes merupakan rumah sakit yang berfokus pada pelayanan kesehatan terpadu dengan mengutamakan
+                        kenyamanan dan keselamatan pasien. Dikelola oleh tenaga medis berpengalaman serta fasilitas yang
+                        lengkap, PensKes berupaya menjadi pilihan utama masyarakat dalam mendapatkan layanan kesehatan.</p>
+                    <p>Kami menjunjung tinggi nilai profesionalisme, empati, dan integritas dalam setiap tindakan medis
+                        maupun pelayanan administrasi. Kepuasan dan kesembuhan pasien adalah prioritas utama kami.</p>
+                    <p>Dengan jaringan yang tersebar di Jabodetabek, Jawa Tengah, dan Jawa Timur, PensKes terus
+                        berkembang untuk menjangkau lebih banyak keluarga Indonesia dan memberikan akses layanan
+                        kesehatan berkualitas tinggi.</p>
+                </div>
             </div>
 
-            <!-- Doctor Grid -->
-            <div class="doctor-grid" id="doctorGrid">
-                <!-- Doctors will be rendered by JavaScript -->
+            <!-- Inovasi & Teknologi -->
+            <div class="about-content-block">
+                <h2>Inovasi dan Teknologi</h2>
+                <p>PensKes terus mengembangkan inovasi berbasis teknologi untuk meningkatkan kualitas pelayanan.
+                    Sistem informasi yang terintegrasi memastikan proses pendaftaran, konsultasi, hingga rekam medis
+                    dilakukan secara lebih cepat dan efisien.</p>
+                <p>Selain itu, pemanfaatan teknologi modern dalam diagnosis dan perawatan membantu tenaga medis
+                    memberikan hasil yang lebih akurat serta meningkatkan keselamatan pasien. PensKes juga
+                    mengembangkan platform digital untuk kemudahan akses layanan melalui aplikasi PEKA.</p>
             </div>
 
-            <p id="noResults"
-                style="display: none; text-align: center; color: var(--text-light); padding: 40px 0; font-size: 1rem;">
-                Tidak ada dokter ditemukan untuk filter ini.
-            </p>
+            <!-- Kolaborasi Para Ahli -->
+            <div class="about-content-block">
+                <h2>Kolaborasi Para Ahli</h2>
+                <p>PensKes didukung oleh tim dokter spesialis, tenaga medis, dan profesional kesehatan yang
+                    berkompeten di bidangnya. Kolaborasi antar ahli menjamin pasien mendapatkan diagnosis yang
+                    tepat dan perawatan yang optimal, multidisiplin, sehingga setiap pasien mendapatkan
+                    penanganan yang komprehensif sesuai dengan kebutuhan medisnya.</p>
+                <p>Program pendidikan dan pelatihan berkelanjutan memastikan seluruh tenaga medis PensKes
+                    selalu mengikuti perkembangan ilmu kedokteran terkini demi memberikan pelayanan terbaik
+                    bagi pasien dan keluarga mereka.</p>
+            </div>
+
+            <!-- Visi & Misi -->
+            <div class="about-content-block">
+                <h2>Visi &amp; Misi</h2>
+                <p><strong>Visi:</strong> Menjadi rumah sakit pilihan utama keluarga Indonesia yang memberikan
+                    layanan kesehatan berkualitas, terpercaya, dan terjangkau.</p>
+                <p><strong>Misi:</strong> Menghadirkan layanan kesehatan yang komprehensif dengan mengutamakan
+                    keselamatan pasien, mengembangkan sumber daya manusia yang profesional, menerapkan teknologi
+                    medis terkini, dan berkontribusi pada peningkatan derajat kesehatan masyarakat Indonesia.</p>
+            </div>
+
         </div>
     </section>
 
@@ -109,8 +128,8 @@
                         <div class="logo-icon">PK</div>
                         PensKes
                     </a>
-                    <p>Rumah Sakit PensKes berkomitmen menjadi mitra kesehatan terpercaya bagi keluarga
-                        Indonesia.</p>
+                    <p>Rumah Sakit PensKes berkomitmen menjadi mitra kesehatan terpercaya bagi keluarga Indonesia
+                        dengan layanan medis terdepan.</p>
                     <div class="footer-social">
                         <a href="#" title="Instagram">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -165,10 +184,14 @@
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
-            Cari Dokter & Buat Janji Temu
+            Cari Dokter &amp; Buat Janji Temu
         </a>
         <button class="btn-chat" onclick="window.open('https://api.whatsapp.com/send/?phone=6281280000911','_blank')">
-            💬 Live Chat
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .611.611l4.458-1.495A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.686-6.416-1.867l-.448-.285-3.107 1.041 1.041-3.107-.285-.448A9.958 9.958 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+            </svg>
+            Live Chat
         </button>
     </div>
 

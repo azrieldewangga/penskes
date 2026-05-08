@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buat Janji Temu - Mitra Keluarga</title>
+    <title>Buat Janji Temu - PensKes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -15,8 +15,8 @@
     <header class="header">
         <div class="container header-top">
             <a href="/" class="logo">
-                <div class="logo-icon">MK</div>
-                Mitra Keluarga
+                <div class="logo-icon">PK</div>
+                PensKes
             </a>
 
             <div class="header-actions">
@@ -39,13 +39,6 @@
                     </svg>
                     IGD
                 </button>
-                <button class="btn-login" onclick="alert('Fitur login akan segera hadir!')">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                        <circle cx="12" cy="7" r="4" />
-                    </svg>
-                    Login
-                </button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
             </div>
         </div>
@@ -56,10 +49,10 @@
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/janji-temu" class="active">Buat Janji Temu</a></li>
                     <li><a href="/spesialisasi">Cari Dokter</a></li>
-                    <li><a href="index.html#coe-section">Layanan Unggulan</a></li>
-                    <li><a href="index.html#promo-section">Promo</a></li>
-                    <li><a href="index.html#artikel-section">Artikel</a></li>
-                    <li><a href="index.html#about-section">Tentang Kami</a></li>
+                    <li><a href="/layanan-unggulan">Layanan Unggulan</a></li>
+                    <li><a href="/promo">Promo</a></li>
+                    <li><a href="/artikel">Artikel</a></li>
+                    <li><a href="/tentang-kami">Tentang Kami</a></li>
                 </ul>
             </div>
         </nav>
@@ -81,13 +74,12 @@
                 <!-- Info Box -->
                 <div class="form-info">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                     </svg>
                     <div>
-                        <strong>Panduan Janji Temu:</strong> Pencarian dapat berdasarkan salah satu pilihan saja antara
-                        Nama Dokter / Cabang Mitra Keluarga / Spesialisasi / Tanggal. Jadwal Janji Temu bisa dipilih
-                        dari 30 hari sampai 1 jam sebelum jadwal dokter praktik berakhir.
+                        <strong>Panduan Janji Temu:</strong> Pilih Cabang PensKes dan/atau Spesialisasi, kemudian
+                        pilih tanggal yang diinginkan. Jadwal Janji Temu bisa dipilih dari 30 hari sampai 1 jam
+                        sebelum jadwal dokter praktik berakhir.
                     </div>
                 </div>
 
@@ -106,32 +98,25 @@
                     </div>
                 </div>
 
-                <!-- Step 1: Search Doctor -->
+                <!-- Step 1: Filter -->
                 <div id="formStep1">
-                    <div class="form-group">
-                        <label for="doctorName">Cari Nama Dokter</label>
-                        <input type="text" id="doctorName" placeholder="Ketik nama dokter...">
-                    </div>
-
-                    <p style="text-align: center; color: var(--text-light); margin: 16px 0; font-weight: 600;">ATAU</p>
-
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="branch">Pilih Cabang Mitra Keluarga</label>
+                            <label for="branch">Pilih Cabang PensKes</label>
                             <select id="branch">
                                 <option value="">-- Pilih Cabang --</option>
-                                <option value="kelapa-gading">Mitra Keluarga Kelapa Gading</option>
-                                <option value="bekasi-timur">Mitra Keluarga Bekasi Timur</option>
-                                <option value="kemayoran">Mitra Keluarga Kemayoran</option>
-                                <option value="depok">Mitra Keluarga Depok</option>
-                                <option value="bintaro">Mitra Keluarga Bintaro</option>
-                                <option value="cibubur">Mitra Keluarga Cibubur</option>
-                                <option value="surabaya">Mitra Keluarga Surabaya</option>
-                                <option value="tegal">Mitra Keluarga Tegal</option>
-                                <option value="deltamas">Mitra Keluarga Deltamas</option>
-                                <option value="kalideres">Mitra Keluarga Kalideres</option>
-                                <option value="cikarang">Mitra Keluarga Cikarang</option>
-                                <option value="waru">Mitra Keluarga Waru</option>
+                                <option value="kelapa-gading">PensKes Kelapa Gading</option>
+                                <option value="bekasi-timur">PensKes Bekasi Timur</option>
+                                <option value="kemayoran">PensKes Kemayoran</option>
+                                <option value="depok">PensKes Depok</option>
+                                <option value="bintaro">PensKes Bintaro</option>
+                                <option value="cibubur">PensKes Cibubur</option>
+                                <option value="surabaya">PensKes Surabaya</option>
+                                <option value="tegal">PensKes Tegal</option>
+                                <option value="deltamas">PensKes Deltamas</option>
+                                <option value="kalideres">PensKes Kalideres</option>
+                                <option value="cikarang">PensKes Cikarang</option>
+                                <option value="waru">PensKes Waru</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -139,21 +124,18 @@
                             <select id="specialization">
                                 <option value="">-- Pilih Spesialisasi --</option>
                                 <option value="anak">Anak</option>
-                                <option value="bedah-ortopedi">Bedah Ortopedi</option>
-                                <option value="bedah-saraf">Bedah Saraf</option>
-                                <option value="bedah-umum">Bedah Umum</option>
-                                <option value="bedah-urologi">Bedah Urologi</option>
+                                <option value="bedah">Bedah</option>
                                 <option value="gigi">Gigi</option>
-                                <option value="jantung">Jantung & Pembuluh Darah</option>
-                                <option value="kandungan">Kebidanan & Kandungan</option>
-                                <option value="kulit">Kulit & Kelamin</option>
+                                <option value="jantung">Jantung &amp; Pembuluh Darah</option>
+                                <option value="kandungan">Kebidanan &amp; Kandungan</option>
+                                <option value="kulit">Kulit &amp; Kelamin</option>
                                 <option value="mata">Mata</option>
-                                <option value="paru">Paru & Pernapasan</option>
+                                <option value="paru">Paru &amp; Pernapasan</option>
                                 <option value="penyakit-dalam">Penyakit Dalam</option>
+                                <option value="psikolog">Psikolog</option>
+                                <option value="rehabilitasi">Kedokteran Fisik &amp; Rehabilitasi</option>
                                 <option value="saraf">Saraf</option>
                                 <option value="tht">THT</option>
-                                <option value="rehabilitasi">Kedokteran Fisik & Rehabilitasi</option>
-                                <option value="psikolog">Psikolog</option>
                             </select>
                         </div>
                     </div>
@@ -163,84 +145,49 @@
                         <input type="date" id="appointmentDate">
                     </div>
 
-                    <button class="btn-submit" onclick="goToStep(2)">Selanjutnya, Pilih Dokter &rarr;</button>
+                    <button class="btn-submit" onclick="proceedToStep2()">Selanjutnya, Pilih Dokter &rarr;</button>
                 </div>
 
-                <!-- Step 2: Doctor Selection Result -->
+                <!-- Step 2: Doctor List (filtered) -->
                 <div id="formStep2" style="display: none;">
+                    <div id="errorStep2" class="form-error-banner" style="display:none;"></div>
                     <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Pilih Dokter yang Tersedia</h3>
 
-                    <div class="doctor-grid" style="margin-bottom: 24px;">
-                        <div class="doctor-card" onclick="selectDoctor(this, 'Dr. Ahmad Fauzi, Sp.PD')">
-                            <div class="doctor-card-header">
-                                <div class="doctor-avatar">AF</div>
-                                <div class="doctor-info">
-                                    <h3>Dr. Ahmad Fauzi, Sp.PD</h3>
-                                    <div class="doctor-specialization">Penyakit Dalam</div>
-                                    <div class="doctor-location">📍 MK Kelapa Gading</div>
-                                </div>
-                            </div>
-                            <div class="doctor-card-footer">
-                                <span class="doctor-schedule">Senin, Rabu, Jumat | 08:00 - 14:00</span>
-                            </div>
-                        </div>
-                        <div class="doctor-card" onclick="selectDoctor(this, 'Dr. Siti Nurhaliza, Sp.A')">
-                            <div class="doctor-card-header">
-                                <div class="doctor-avatar">SN</div>
-                                <div class="doctor-info">
-                                    <h3>Dr. Siti Nurhaliza, Sp.A</h3>
-                                    <div class="doctor-specialization">Anak</div>
-                                    <div class="doctor-location">📍 MK Bekasi Timur</div>
-                                </div>
-                            </div>
-                            <div class="doctor-card-footer">
-                                <span class="doctor-schedule">Selasa, Kamis | 09:00 - 15:00</span>
-                            </div>
-                        </div>
-                        <div class="doctor-card" onclick="selectDoctor(this, 'Dr. Budi Santoso, Sp.JP')">
-                            <div class="doctor-card-header">
-                                <div class="doctor-avatar">BS</div>
-                                <div class="doctor-info">
-                                    <h3>Dr. Budi Santoso, Sp.JP</h3>
-                                    <div class="doctor-specialization">Jantung & Pembuluh Darah</div>
-                                    <div class="doctor-location">📍 MK Kemayoran</div>
-                                </div>
-                            </div>
-                            <div class="doctor-card-footer">
-                                <span class="doctor-schedule">Senin - Jumat | 10:00 - 16:00</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="doctor-grid" id="appointmentDoctorGrid" style="margin-bottom: 8px;"></div>
+                    <p id="apptNoResults" style="display: none; text-align: center; color: var(--text-light); padding: 32px 0; font-size: 1rem;">
+                        Tidak ada dokter tersedia untuk pilihan ini.
+                    </p>
 
-                    <div style="display: flex; gap: 12px;">
-                        <button class="btn-submit" style="background: var(--text-gray);" onclick="goToStep(1)">&larr;
-                            Kembali</button>
-                        <button class="btn-submit" onclick="goToStep(3)">Lanjut ke Data Pasien &rarr;</button>
+                    <div style="display: flex; gap: 12px; margin-top: 16px;">
+                        <button class="btn-submit" style="background: var(--text-gray);" onclick="goToStep(1)">&larr; Kembali</button>
+                        <button class="btn-submit" onclick="proceedToStep3()">Lanjut ke Data Pasien &rarr;</button>
                     </div>
                 </div>
 
                 <!-- Step 3: Patient Data -->
                 <div id="formStep3" style="display: none;">
-                    <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Data Pasien</h3>
+                    <div id="errorStep3" class="form-error-banner" style="display:none;"></div>
+                    <h3 style="margin-bottom: 4px; font-size: 1.1rem;">Data Pasien</h3>
+                    <p id="apptSelectedDoctorNote" style="margin-bottom: 20px; color: var(--primary-blue); font-size: 0.9rem; font-weight: 600;"></p>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="patientName">Nama Lengkap Pasien</label>
+                            <label for="patientName">Nama Lengkap Pasien <span style="color: #e53e3e;">*</span></label>
                             <input type="text" id="patientName" placeholder="Nama lengkap sesuai KTP">
                         </div>
                         <div class="form-group">
-                            <label for="patientPhone">Nomor Telepon</label>
-                            <input type="tel" id="patientPhone" placeholder="08xxxxxxxxxx">
+                            <label for="patientPhone">Nomor Telepon <span style="color: #e53e3e;">*</span></label>
+                            <input type="tel" id="patientPhone" placeholder="08xxxxxxxxxx" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="patientDOB">Tanggal Lahir</label>
+                            <label for="patientDOB">Tanggal Lahir <span style="color: #e53e3e;">*</span></label>
                             <input type="date" id="patientDOB">
                         </div>
                         <div class="form-group">
-                            <label for="patientGender">Jenis Kelamin</label>
+                            <label for="patientGender">Jenis Kelamin <span style="color: #e53e3e;">*</span></label>
                             <select id="patientGender">
                                 <option value="">-- Pilih --</option>
                                 <option value="laki-laki">Laki-laki</option>
@@ -250,7 +197,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="patientEmail">Email</label>
+                        <label for="patientEmail">Email <span style="color: #e53e3e;">*</span></label>
                         <input type="email" id="patientEmail" placeholder="email@contoh.com">
                     </div>
 
@@ -260,14 +207,38 @@
                     </div>
 
                     <div style="display: flex; gap: 12px;">
-                        <button class="btn-submit" style="background: var(--text-gray);" onclick="goToStep(2)">&larr;
-                            Kembali</button>
-                        <button class="btn-submit" onclick="submitAppointment()">Konfirmasi Janji Temu ✓</button>
+                        <button class="btn-submit" style="background: var(--text-gray);" onclick="goToStep(2)">&larr; Kembali</button>
+                        <button class="btn-submit" onclick="proceedToStep4()">Lanjut ke Konfirmasi &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation Summary -->
+                <div id="formStep4" style="display: none;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Ringkasan Janji Temu</h3>
+                    <div id="confirmationSummary"></div>
+                    <div style="display: flex; gap: 12px; margin-top: 24px;">
+                        <button class="btn-submit" style="background: var(--text-gray);" onclick="goToStep(3)">&larr; Kembali</button>
+                        <button class="btn-submit" onclick="submitAppointment()">Buat Janji Temu ✓</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ===== SUCCESS MODAL ===== -->
+    <div id="successModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center;">
+        <div style="background:#fff; border-radius:20px; padding:40px 32px; max-width:420px; width:90%; text-align:center; box-shadow:0 24px 64px rgba(0,0,0,0.25); animation:modalIn .25s ease;">
+            <div style="width:72px; height:72px; background:#22c55e; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h2 style="margin:0 0 10px; color:#1e293b; font-size:1.4rem;">Janji Temu Berhasil!</h2>
+            <p style="color:#64748b; margin:0 0 28px; font-size:0.95rem; line-height:1.6;">Konfirmasi akan dikirim via SMS/WhatsApp.<br>Terima kasih telah memilih PensKes!</p>
+            <button onclick="closeSuccessModal()" style="background:var(--primary-blue); color:white; border:none; padding:12px 40px; border-radius:10px; font-size:1rem; font-weight:600; cursor:pointer; width:100%;">OK</button>
+        </div>
+    </div>
+    <style>
+        @keyframes modalIn { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
+    </style>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
@@ -275,16 +246,30 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="/" class="logo">
-                        <div class="logo-icon">MK</div>
-                        Mitra Keluarga
+                        <div class="logo-icon">PK</div>
+                        PensKes
                     </a>
-                    <p>Rumah Sakit Mitra Keluarga berkomitmen menjadi mitra kesehatan terpercaya bagi keluarga
+                    <p>Rumah Sakit PensKes berkomitmen menjadi mitra kesehatan terpercaya bagi keluarga
                         Indonesia.</p>
+                    <div class="footer-social">
+                        <a href="#" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" title="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.54V6.79a4.85 4.85 0 01-1.01-.1z"/></svg>
+                        </a>
+                        <a href="#" title="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" title="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4>Quick Menu</h4>
                     <ul>
-                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="/tentang-kami">Tentang Kami</a></li>
                         <li><a href="#">Investor</a></li>
                         <li><a href="#">Download Aplikasi</a></li>
                     </ul>
@@ -302,13 +287,13 @@
                     <h4>Hubungi Kami</h4>
                     <ul>
                         <li><a href="#">📞 (021) 6453-888</a></li>
-                        <li><a href="#">📧 info@mitrakeluarga.com</a></li>
+                        <li><a href="#">📧 info@penskes.com</a></li>
                         <li><a href="#">💬 0812 8000 0911</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Rumah Sakit Mitra Keluarga. All rights reserved.
+                &copy; 2026 Rumah Sakit PensKes. All rights reserved.
             </div>
         </div>
     </footer>
